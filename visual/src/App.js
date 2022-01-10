@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 // Views
 import Home from './pages/Home'
 import UserCreate from './pages/UserCreate'
+import Login from './pages/Login';
 import UserPage from './pages/UserPage'
 import NotFound from './pages/NotFound'
 // Components
@@ -17,9 +18,9 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/user" element={<UserPage />} />
         <Route path="/Create" element={<UserCreate />} />
-        
         <Route path="*" element={<NotFound />} />
 
       </Routes>
