@@ -1,7 +1,19 @@
+// ------------------------ Libraries --------------------------
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+
+
+import { useAuth0 } from "@auth0/auth0-react";
+// ------------------------ Data from other files --------------------------
+import Login from './Login';
+import Logout from './Logout'
+// Header export
 const Header = () => {
+
+    const { isAuthenticated } = useAuth0()
+
     return (
+
+
         <header>
             <nav className="navbar navbar-dark bg-dark navbar-expand-lg" role="navigation">
                 <div className="container">
@@ -10,28 +22,7 @@ const Header = () => {
                     </p>
                 </div>
 
-                <ul className="navbar-nav ms-auto me-5">
-                    <li className="nav-item">
-                        <NavLink to="/" className={({ isActive }) => "nav-link " + (isActive ? "active" : "")}>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/user" className={({ isActive }) => "nav-link " + (isActive ? "active" : "")}>
-                            user
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/create" className={({ isActive }) => "nav-link " + (isActive ? "active" : "")}>
-                            Create User
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to="/Login" className="btn btn-success">
-                            Login
-                        </NavLink>
-                    </li>
-                </ul>
+                {isAuthenticated ? <Login /> : <Logout />}
 
             </nav>
         </header>
