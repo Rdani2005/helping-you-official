@@ -77,36 +77,57 @@
 /* 404 Animation */
 
 .rotate-scale-up {
-    font-weight: bold;
-    -webkit-animation: rotate-scale-up 0.65s linear both;
-    animation: rotate-scale-up 0.65s linear both;
+  font-weight: bold;
+  -webkit-animation: rotate-scale-up 0.65s linear both;
+  animation: rotate-scale-up 0.65s linear both;
 }
 
 @-webkit-keyframes rotate-scale-up {
-    0% {
-        -webkit-transform: scale(1) rotateZ(0);
-        transform: scale(1) rotateZ(0);
-    }
-    50% {
-        -webkit-transform: scale(2) rotateZ(180deg);
-        transform: scale(2) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-        transform: scale(1) rotateZ(360deg);
-    }
-    }
-    @keyframes rotate-scale-up {
-    0% {
-        -webkit-transform: scale(1) rotateZ(0);
-        transform: scale(1) rotateZ(0);
-    }
-    50% {
-        -webkit-transform: scale(2) rotateZ(180deg);
-        transform: scale(2) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-        transform: scale(1) rotateZ(360deg);
-    }
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.bg-personalize-1 {
+  background-color: #eef2f1;
+}
+
+.bg-personalize-2 {
+  background-color: #737c85;
+}
+
+.bg-personalize-3 {
+  background-color: #7b8c8c;
+}
+
+.bg-personalize-4 {
+  background-color: #1f2529;
+}
+
+.card--shadow {
+  box-shadow: 7.6px 6.1px 16.5px -24px rgba(0, 0, 0, 0.315),
+    61px 49px 132px -24px rgba(0, 0, 0, 0.63);
 }
