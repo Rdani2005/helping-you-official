@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'mental',
     'physical',
     'profiles_api',
+    'login_api',
 ]
 
 MIDDLEWARE = [
