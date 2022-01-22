@@ -20,11 +20,12 @@ INSTALLED_APPS = [
     # Frameworks
     'rest_framework',
     'rest_framework.authtoken',
+    'knox',
     # My own apps
     'blogs',
-    'mental',
-    'physical',
+    'Excersises',
     'profiles_api',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-# Database
+# Database 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
