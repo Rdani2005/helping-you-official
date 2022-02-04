@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'rest_framework',
     # My Apps
     'blog',
-    'Excercises',
+    'exercise',
+
 ]
 # Middlewares
 MIDDLEWARE = [

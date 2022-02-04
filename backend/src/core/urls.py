@@ -9,4 +9,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # API for user blog
     path('blog/api/', include('blog.urls')),
+    path('exercise/api/', include('exercise.urls')),
 ]

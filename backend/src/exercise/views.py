@@ -14,7 +14,7 @@ __copyright__ = "Copyright (C) Danny Sequeira 2022"
 def getRoutes(request):
     routes = [
         {
-            'endpoint':'/mental-excersises/',
+            'endpoint': '/mental-excersises/',
             'method': 'GET',
             'body': None,
             'Description': 'Returns an array of mental excersises'
@@ -24,22 +24,56 @@ def getRoutes(request):
             'methods': 'GET',
             'body': None,
             'Description': 'Returns the mental excersise'
+        },
+        {
+            'endpoint': '/physical-excersises/',
+            'method': 'GET',
+            'body': None,
+            'Description': 'Returns an array of mental excersises'
+        },
+        {
+            'endpoint': '/physical-excersises/excercise/id',
+            'methods': 'GET',
+            'body': None,
+            'Description': 'Returns the mental excersise'
         }
-
     ]
     return Response(routes)
-# API to create and look for blogs
+# API to get Mental exercises
+
+
 @api_view(['GET'])
 def getMentalExercises(request):
     mentals = Mental.objects.all().order_by('-updated')
     serializer = MentalSerializer(mentals, many=True)
     return Response(serializer.data)
 
-# API to look for the blog, update or delete
+# API to get the exactly mental exercise
+
+
 @api_view(['GET'])
 def getMentalExcercise(request, pk):
     # Get the blog information
     mental = Mental.objects.get(id=pk)
     serializer = MentalSerializer(mental, many=False)
     return Response(serializer.data)
-    
+
+# TODO: Add all the physical API views
+# Get all the Physical exercise
+
+
+@api_view(['GET'])
+def getPhysicalExercises(request):
+    physicals = Physical.objects.all().order_by('-updated')
+    serializer = PhysicalSerializer(physicals, many=True)
+    return Response(serializer.data)
+
+# Gey an exactly physical exercise
+
+
+@api_view(['GET'])
+def getPhysicalExcercise(request, pk):
+    # Get the physical exersise information
+    physical = Physical.objects.get(id=pk)
+    serializer = PhysicalSerializer(physical, many=False)
+    return Response(serializer.data)
