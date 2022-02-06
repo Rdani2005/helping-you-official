@@ -15,7 +15,7 @@ const Header = () => {
 
 
         <header>
-            <nav className="navbar navbar-dark bg-dark navbar-expand-lg" role="navigation">
+            <nav className="navbar navbar-dark bg-dark navbar-expand-lg fixed-top" role="navigation">
                 <div className="container">
                     <p href="" className="navbar-brand logo">
                         Helping You
