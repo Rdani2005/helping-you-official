@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     # My Apps
     'blog',
     'exercise',
-
+    'todos',
 ]
 # Middlewares
 MIDDLEWARE = [

@@ -10,4 +10,5 @@ urlpatterns = [
     # API for user blog
     path('blog/api/', include('blog.urls')),
     path('exercise/api/', include('exercise.urls')),
+    path('todos/api/', include('todos.urls')),
 ]
