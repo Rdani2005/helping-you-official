@@ -1,1 +1,4 @@
 *.txt
+bin/
+lib/
+pyvenv.cfg
